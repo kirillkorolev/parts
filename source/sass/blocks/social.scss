@@ -1,0 +1,74 @@
+.social {
+  @include reset-list;
+  display: flex;
+  padding: 0 16px 5px 7px;
+}
+
+.social__link {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 3px solid $blue;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.social__logo {
+  width: 15px;
+  height: 15px;
+  border: 3px solid $blue;
+  border-radius: 50%;
+  position: relative;
+}
+
+.social__logo::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background-color: $blue;
+  top: -6px;
+  right: -3px;
+}
+
+.social__icon {
+  color: $blue;
+}
+
+.social__link:hover,
+.social__link:focus {
+  border-color: $red;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  color: $red;
+}
+
+.social__link:hover .social__logo,
+.social__link:focus .social__logo {
+  border-color: $red;
+}
+
+.social__link:hover .social__logo::after,
+.social__link:focus .social__logo::after {
+  background-color: $red;
+}
+
+.social__link:active {
+  opacity: 0.7;
+}
+
+@media (max-width: $mobile-width) {
+  .social {
+    padding: 0;
+    order: 0;
+    margin-bottom: 20px;
+  }
+}

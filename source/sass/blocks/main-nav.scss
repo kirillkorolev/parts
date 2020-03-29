@@ -1,0 +1,168 @@
+.main-nav {
+  @include reset-list;
+
+  display: flex;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 11px 1.575% 8px 1.05%;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.main-nav__link {
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: $black;
+}
+
+.main-nav__link:active {
+  opacity: 0.7;
+}
+
+.main-nav__icon {
+  flex-shrink: 0;
+}
+
+.main-nav__item {
+  &--catalog {
+    margin-right: 7%;
+
+    .main-nav__link {
+      width: 121px;
+    }
+  }
+
+  &--small-clients {
+    margin-right: 6.2%;
+
+    .main-nav__link {
+      width: 130px;
+    }
+  }
+
+  &--big-clients {
+    margin-right: 6%;
+
+    .main-nav__link {
+      width: 133px;
+    }
+  }
+
+  &--resellers {
+    margin-right: 5.6%;
+
+    .main-nav__link {
+      width: 170px;
+    }
+  }
+
+  &--contacts {
+    margin-right: 4.7%;
+
+    .main-nav__link {
+      width: 133px;
+    }
+  }
+
+  &--cabinet {
+    margin-right: 5%;
+
+    .main-nav__link {
+      width: 115px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    flex-direction: column;
+    padding: 0;
+    z-index: 10;
+    width: 100%;
+    overflow-x: visible;
+  }
+
+  .main-nav__link {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    background-color: $blue;
+    padding: 10px;
+  }
+
+  .main-nav__item {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid $white;
+
+    &--catalog {
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+
+    &--small-clients {
+      margin-right: 0;
+
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+
+    &--big-clients {
+      margin-right: 0;
+
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+
+    &--resellers {
+      margin-right: 0;
+
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+
+    &--contacts {
+      margin-right: 0;
+
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+
+    &--cabinet {
+      margin-right: 0;
+
+      .main-nav__link {
+        width: 100%;
+      }
+    }
+  }
+
+  .main-nav__icon {
+    display: none;
+  }
+
+  .main-nav__link:hover,
+  .main-nav__link:focus {
+    color: $white;
+    background-color: $very-dark-blue;
+  }
+}
